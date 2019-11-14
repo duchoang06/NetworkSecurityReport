@@ -315,32 +315,111 @@
 	Các thành phần này có các (dải) địa chỉ IP sau đây trong kiến trúc hệ thống như hình trên:
 	\begin{enumerate}
 		\item Hệ thống các mạng con:
-		\begin{tabular}{|c|c|c|c|}
-			Tên & Network ID & Subnet mask & Gateway
-			\\
-			\hline
-			WAN & 10.0.2.0 & 255.255.255.0 & 10.0.2.1
-			\\
-			\hline
-			LAN & 192.168.0.0 & 255.255.255.0 & 192.168.0.1
-			\\
-			\hline
-			DMZ & 192.168.1.0 & 255.255.255.0 & 192.168.1.1
-			\\
-			\hline
-			Internet & & &
-			\\
-			\hline 
-		\end{tabular}
+		\begin{table} [!h]
+			\centering
+			\begin{tabular}{|c|c|c|c|}
+				\hline
+				Tên & Network ID & Subnet mask & Gateway
+				\\
+				\hline
+				WAN & 10.0.2.0 & 255.255.255.0 & 10.0.2.1
+				\\
+				\hline
+				LAN & 192.168.0.0 & 255.255.255.0 & 192.168.0.1
+				\\
+				\hline
+				DMZ & 192.168.1.0 & 255.255.255.0 & 192.168.1.1
+				\\
+				\hline
+				Internet & & &
+				\\
+				\hline 
+			\end{tabular}
+		\end{table}
 		\item Các thiết bị trong mạng con:
-		\begin{tabular} {ccc}
-			Tên & Địa chỉ 
-		\end{tabular}
+		\begin{table} [!h]
+			\centering
+			\begin{tabular} {|c|c|c|c|}
+				\hline
+				Tên thiết bị & Địa chỉ IP & Thuộc mạng & Ghi chú
+				\\
+				\hline
+				WAN computer & if0: 10.0.2.4/24 & WAN & DHCP
+				\\
+				\hline
+				LAN computer & if0: 192.168.0.3/24 & LAN & DHCP
+				\\
+				\hline
+				DMZ server & if0: 192.168.1.3/24 & DMZ & Static
+				\\
+				\hline
+				pfSense UTM & 	\begin{tabular} {@{}c@{}}
+									if0: 10.0.2.15/24
+									\\
+									if1: 192.168.0.1/24
+									\\
+									if2: 192.168.1.1/24
+								\end{tabular}
+								& & 
+								\begin{tabular} {@{}c@{}}
+									if0: DHCP
+									\\
+									if1: Static
+									\\
+									if2: Static
+								\end{tabular}
+				\\
+				\hline  
+			\end{tabular}
+		\end{table}
 	\end{enumerate}
 
-	
+	\newpage
 	\subsection{Lựa chọn công cụ}
-	\subsection{Thiết kế chức năng}
+	Nhóm đã hiện thực thiết kế hệ thống trên nền tảng ảo hoá Oracle VM VirtualBox với cách kết nối các thiết bị như sau:
+	\begin{table} [!h]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Tên mạng & Loại & Các interface kết nối
+			\\
+			\hline
+			Mạng WAN & NAT Network &
+				\begin{tabular} {@{}c@{}}
+					WAN computer: if0
+					\\
+					pfSense UTM: if0
+				\end{tabular}
+			\\
+			\hline
+			Mạng LAN & Internal Network & 
+				\begin{tabular} {@{}c@{}}
+					pfSense UTM: if1
+					\\
+					LAN computer: if0
+				\end{tabular}
+			\\
+			\hline
+			Mạng DMZ & Internal Network & 
+				\begin{tabular} {@{}c@{}}
+					DMZ server: if0
+					\\
+					pfSense UTM: if2
+				\end{tabular}
+			\\
+			\hline
+		\end{tabular}	
+	\end{table}
+	\subsection{Chi tiết thiết kế}
+	Chi tiết thiết kế của hệ thống sẽ được trình bày theo từng thiết bị có trong hệ thống mạng đề xuất:
+	\subsubsection{pfSense UTM}
+	\subsubsubsection{Tổng quan}
+	pfSense là phần mềm định tuyến/tường lửa mã nguồn mở miễn phí dành cho máy tính dựa trên hệ điều hành FreeBSD được phát triển bởi Netgate. pfSense có thể được cài đặt trên máy tính vật lý hoặc máy ảo để xây dựng hệ thống định tuyến/tường lửa cho mạng.
+	\par
+	Trong bài tập lớn này, nhóm sử dụng pfSense phiên bản 2.4.4-p, được cài đặt trên máy ảo có cấu hình: Vi xử lý Intel Core i7 8750H x 3 CPUs và 4GB RAM. Để bổ sung và hoàn thiện pfSense thành 1 UTM đa chức năng, nhóm đã thiết lập và cài đặt thêm các dịch vụ sau đây:
+	\subsubsubsection{Firewall rules}
+	a
+	
 	\section{Hiện thực và đánh giá hệ thống}
 	\subsection{Hiên thực hệ thống trên môi trường ảo hoá}
 	\subsection{Hiện thực chức năng và kiểm thử}

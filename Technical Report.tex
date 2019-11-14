@@ -304,7 +304,18 @@
 	% image goes here
 	
 	\subsection{Mạng con và chia dải địa chỉ}
-	
+	Hệ thống mạng mà nhóm xây dựng bao gồm các thành phần mạng con:
+	\begin{enumerate}
+		\item Tường lửa: Đây là thành phần chính của bài tập lớn này, bao gồm các chức năng thiết lập, quản lý và theo dõi hệ thống, các chức năng của thành phần này sẽ được giải thích chi tiết sau đó.
+		\item Mạng LAN: Mạng LAN là một subnet được đặt phía sau bức tương lửa, được bảo vệ bởi các dịch vụ của tường lửa.
+		\item Mạng DMZ: Mạng DMZ đại diện như một phần của hệ thống mạng với các thiết bị bên trong là các server cung cấp dịch vụ có thể được truy cập từ "Internet". Cần lưu ý rằng giới hạn "Internet" mà nhóm đặt ra trong thiết kế hệ thống mạng chỉ đơn giản là một subnet khác của hệ thống mạng (được gọi là WAN kể từ đây).
+		\item Mạng WAN: Là một subnet với các client trong đó bao gồm bức tường lửa cần xây dựng. Các kết nối từ mạng WAN này đến các thiết bị trong LAN hay DMZ được xem như là kết nối từ "Internet" trong phạm vi của bài tập lớn này.
+		\item Internet: Cho phép các truy cập đến những dịch vụ đang được mạng Internet "thật" cung cấp.
+	\end{enumerate}
+	Các thành phần này có các (dải) địa chỉ IP sau đây trong kiến trúc hệ thống như hình trên:
+	\begin{enumerate}
+		\item Tường lửa: 
+	\end{enumerate}
 	
 	\subsection{Lựa chọn công cụ}
 	\subsection{Thiết kế chức năng}

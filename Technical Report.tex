@@ -314,8 +314,30 @@
 	\end{enumerate}
 	Các thành phần này có các (dải) địa chỉ IP sau đây trong kiến trúc hệ thống như hình trên:
 	\begin{enumerate}
-		\item Tường lửa: 
+		\item Hệ thống các mạng con:
+		\begin{tabular}{|c|c|c|c|}
+			Tên & Network ID & Subnet mask & Gateway
+			\\
+			\hline
+			WAN & 10.0.2.0 & 255.255.255.0 & 10.0.2.1
+			\\
+			\hline
+			LAN & 192.168.0.0 & 255.255.255.0 & 192.168.0.1
+			\\
+			\hline
+			DMZ & 192.168.1.0 & 255.255.255.0 & 192.168.1.1
+			\\
+			\hline
+			Internet & & &
+			\\
+			\hline 
+		\end{tabular}
+		\item Các thiết bị trong mạng con:
+		\begin{tabular} {ccc}
+			Tên & Địa chỉ 
+		\end{tabular}
 	\end{enumerate}
+
 	
 	\subsection{Lựa chọn công cụ}
 	\subsection{Thiết kế chức năng}

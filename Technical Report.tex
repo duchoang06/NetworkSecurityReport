@@ -1,0 +1,319 @@
+\documentclass[12pt,titlepage,a4paper]{article}
+%\documentclass[a4paper,fontsize=13pt]{scrartcl}
+
+%\usepackage{helvet} %set font Helvetica
+
+%\usepackage{times} %set font Times New Roman
+%\renewcommand{\familydefault}{\sfdefault} %set font Sans Serif
+
+\usepackage[english]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{vntex}
+
+\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+\usepackage{a4wide,amssymb,epsfig,latexsym,array,hhline,fancyhdr}
+\usepackage{framed}    % đóng khung đoạn văn
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{multicol,longtable,amscd}
+\usepackage{diagbox}%Make diagonal lines in tables
+%\usepackage{booktab}
+\usepackage{alltt}
+
+\usepackage{lastpage}
+\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
+\usepackage{enumerate}
+\usepackage{xcolor}
+\usepackage{graphicx}							% Standard graphics package
+\usepackage{array}
+\usepackage{tabularx, caption}
+\usepackage{multirow}
+\usepackage{framed}    % đóng khung đoạn văn
+\usepackage{verbatim}  % định dạng text
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=3cm]{geometry}
+
+\usepackage{setspace}
+%\singlespacing
+%\onehalfspacing
+%\doublespacing
+%\setstretch{1.5}
+
+
+\usepackage{epsfig}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\newcommand\HRule{\rule{\textwidth}{1pt}}
+\usetikzlibrary{arrows,snakes,backgrounds}
+\usepackage[unicode]{hyperref}
+\hypersetup{urlcolor=blue,linkcolor=black,citecolor=black,colorlinks=true} 
+%\usepackage{pstcol} 								% PSTricks with the standard color package
+
+\usepackage{a4wide,amssymb,epsfig,latexsym,array,hhline,fancyhdr}
+
+\usepackage[makeroom]{cancel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{multicol,longtable,amscd}
+\usepackage{diagbox}%Make diagonal lines in tables
+\usepackage{booktabs}
+\usepackage{alltt}
+\usepackage[framemethod=tikz]{mdframed}% For highlighting paragraph backgrounds
+\usepackage{caption,subcaption}
+\usepackage{arydshln}
+\usepackage{tabularx} % in the preamble
+
+\setlength\dashlinedash{1.5pt}
+\setlength\dashlinegap{4.5pt}
+\setlength\arrayrulewidth{0.2pt}
+
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{listingsutf8}
+% Typesetting Listings
+\usepackage{xcolor}
+\usepackage{color}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\definecolor{Darkgreen}{rgb}{0.1,0.6,0.1}
+
+\lstset{
+	backgroundcolor=\color{lbcolor},
+	tabsize=4,    
+	%   rulecolor=,
+	language=[GNU]C++,
+	basicstyle=\scriptsize,
+	upquote=true,
+	aboveskip={1.5\baselineskip},
+	columns=fixed,
+	showstringspaces=false,
+	extendedchars=false,
+	breaklines=true,
+	prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+	frame=single,
+	numbers=left,
+	showtabs=false,
+	showspaces=false,
+	showstringspaces=false,
+	identifierstyle=\ttfamily,
+	keywordstyle=\color[rgb]{0,0,1},
+	commentstyle=\color[rgb]{0.026,0.112,0.095},
+	stringstyle=\color[rgb]{0.627,0.126,0.941},
+	numberstyle=\color[rgb]{0.205, 0.142, 0.73},
+	%        \lstdefinestyle{C++}{language=C++,style=numbers}’.
+}
+\lstset{
+	backgroundcolor=\color{lbcolor},
+	tabsize=4,
+	language=C++,
+	captionpos=b,
+	tabsize=3,
+	frame=lines,
+	numbers=left,
+	numberstyle=\tiny,
+	numbersep=5pt,
+	breaklines=true,
+	showstringspaces=false,
+	basicstyle=\footnotesize,
+	%  identifierstyle=\color{magenta},
+	keywordstyle=\color[rgb]{0,0,1},
+	commentstyle=\color{Darkgreen},
+	stringstyle=\color{red}
+}
+
+\usepackage{lastpage}
+\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{graphicx}							% Standard graphics package
+\usepackage{array}
+\usepackage{tabularx, caption}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{epsfig}
+\usepackage{tikz}
+\usetikzlibrary{arrows,snakes,backgrounds}
+\usepackage[unicode]{hyperref}
+\hypersetup{urlcolor=blue,linkcolor=black,citecolor=black,colorlinks=true} 
+%\usepackage{pstcol} 								% PSTricks with the standard color package
+\usepackage{verbatim}
+
+
+
+
+%\usepackage{fancyhdr}
+\setlength{\headheight}{40pt}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{
+	\begin{tabular}{rl}
+		\begin{tabular}{l}
+			\textbf{\bf \ttfamily Falcuty of CSE}\\
+		\end{tabular} 	
+	\end{tabular}
+}
+\fancyhead[R]{
+	\begin{tabular}{l}
+		\tiny \bf \\
+		\tiny \bf 
+\end{tabular}  }
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L]{\scriptsize \ttfamily Lab Report} %Nội dung của footer ở đây
+\fancyfoot[R]{\scriptsize \ttfamily Page  {\thepage}/\pageref{LastPage}} % page number
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+%%%
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\makeatletter
+\newcounter {subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection .\@alph\c@subsubsubsection}
+\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}%
+	{-3.25ex\@plus -1ex \@minus -.2ex}%
+	{1.5ex \@plus .2ex}%
+	{\normalfont\normalsize\bfseries}}
+\newcommand*\l@subsubsubsection{\@dottedtocline{3}{10.0em}{4.1em}}
+\newcommand*{\subsubsubsectionmark}[1]{}
+\makeatother
+\everymath{\color{black}}%make in-line maths symbols blue to read/check easily
+\sloppy
+\captionsetup[figure]{labelfont={small,bf},textfont={small,it},belowskip=-1pt,aboveskip=-9pt}
+%space remove between caption, figure, and text
+\captionsetup[table]{labelfont={small,bf},textfont={small,it},belowskip=-1pt,aboveskip=7pt}
+\setlength{\floatsep}{5pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{5pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Initilization done. Now document starts.
+
+
+\begin{document}
+	\begin{titlepage}
+		\begin{tikzpicture}[remember picture, overlay]
+		\draw[line width = 2pt,color=blue] ($(current page.north west) + (2.7cm,-2.7cm)$) rectangle ($(current page.south east) + (-2.7cm,2.7cm)$);
+		\draw[line width = 1pt,color=green] ($(current page.north west) + (2.6cm,-2.6cm)$) rectangle ($(current page.south east) + (-2.6cm,2.6cm)$);
+		\end{tikzpicture}
+		\vspace{0cm}
+		\begin{center}
+			Ho Chi Minh City University of Technology - VNU-HCM \\
+			\textbf{Faculty of Computer Science and Engineering} \\
+			- - - - - - - - - - - -
+		\end{center}
+		
+		
+		\vspace{1cm}
+		\begin{figure}[h!]
+			\begin{center}
+				\includegraphics[width=3.6cm]{Images/hcmut.png}
+			\end{center}
+		\end{figure}
+		\vspace{1cm}
+		
+		
+		
+		\begin{center}
+			\begin{tabular}{c}
+				\multicolumn{1}{c}{\textbf{{\Large MẬT MÃ \& AN NINH MẠNG}}}\\
+				~~\\ %% Tên môn học ở đây
+				\hline
+				\\
+				\multicolumn{1}{c}{\textbf{{\Large BÁO CÁO BÀI TÂP LỚN}}}
+				\\[0.25cm]
+				\textbf{{\large Đề bài số 04}} %% Tên đề tài line 1
+				
+				%\textbf{{\large UART giữa PC và PIC18F8722}} %% Tên đề tài line 2 %% short description
+				\\[0.2cm]
+				\hline
+			\end{tabular}
+		\end{center}
+		
+		\begin{table}[h]
+			\begin{tabular}{ll}
+				\hspace{2.75cm} GVHD: & Nguyễn Cao Đạt\\
+			\end{tabular}
+		\end{table}
+		%\vspace{0.5cm}
+		\begin{table}[h]
+			\hspace{2.75cm} 
+			\begin{tabular}{lll}
+				Sinh viên: & Hoàng Nguyễn Minh Đức & 1610755
+				\\
+				 & Trần Thanh Sang & 1612939
+				 \\
+				 & Thái Thị Thanh Linh & 1611830
+			\end{tabular}
+		\end{table}
+		
+		\vspace{5cm}
+		\begin{center}
+			{\footnotesize TP. Hồ Chí Minh, tháng 11 năm 2019 }
+		\end{center}
+	\end{titlepage}
+	
+	%Mục lục
+	\newpage
+	\thispagestyle{empty}
+	\tableofcontents
+	
+	% Page 1
+	\newpage
+	\section{Giới thiệu}
+	\subsection{Đặt vấn đề}
+	Trong thời gian gần đây, các cuộc tấn công mạng, gián điệp, tội phạm mạng không ngừng gia tăng nhằm đánh cắp dữ liệu, thông tin bí mật nhà nước, phá hoại hệ thống thông tin. Hoạt động tội phạm mạng ngày càng tinh vi, gây ra nhiều hậu quả nghiệm trọng, đe dọa đến trật tự an toàn xã hội, sự ổn định chính trị, an ninh của hầu hết các quốc gia, các vùng lãnh thổ và các tập đoàn lớn.
+	\par
+	Vì vậy, một vấn đề cấp bách được đặt ra là phải đảm bảo tính ổn định, sự an toàn của các hệ thống đóng vai trò quan trọng và có ảnh hướng lớn đến số lượng lớn các người dùng, doanh nghiệp và nhà nước.
+	\par
+	Trong bài tập lớn này, nhóm sẽ hiện thực một hệ thống tường lửa với một số chức năng đơn giản để quản lý, theo dõi và bảo vệ hệ thống mạng cục bộ. Các yêu cầu của đề bài sẽ được nhắc đến ở phần sau.
+	
+	\subsection{Nhắc lại đề bài}
+	Trong bài tập lớn này, ta phải triển khai một hệ thống bức tường lửa với nhiều chức năng bổ sung. Bạn có thể dùng các mã nguồn mở có trên web như Shorewall, Squid, SquidGuard, DansGuardian, ClamAV hay Webmin.
+	\par
+	Hệ thống phải có những chức năng sau:
+	\begin{itemize}
+		\item \textbf{Firewall}: bộ lọc gói có trạng thái, không giới hạn số lượng giao tiếp mạng, nhiều giao tiếp mạng trên một zone và nhiều zone trên một giao tiếp, quản lý địa chỉ linh động (NAT, PAT).
+		\item \textbf{Lọc web}: chặn dựa trên URL, Keyword, Phase, chặn Java Applet, Cookies, Active X.
+		\item \textbf{Anti-virus}: Hỗ trợ lọc trên các giao thức HTTP/SMTP/POP3/IMAP/FTP/IM và cơ sở dữ liệu về virus được cập nhật tự động.
+		\item \textbf{AntiSpam}: Hỗ trợ lọc dựa trên Real-time Blacklist, Open Relay Database Server. keyword/phase, IP addresses Blacklist và cơ sở dữ liệu về các loại này được cập nhật tự động.
+		\item \textbf{Quản trị}: Thông qua web.
+	\end{itemize}
+	\subsection{Bố cục của báo cáo}
+	Báo cáo này sẽ được chia thành 4 chương chính, trong đó nội dung của các chương sẽ lần lượt là:
+	\begin{itemize}
+		\item \textbf{Chương 1 - Giới thiệu:} Đặt vấn đề để cho thấy ý nghĩa của đề tài, nhắc lại yêu cầu của đề bài và tóm tắt nội dung báo cáo.
+		\item \textbf{Chương 2 - Phân tích và thiết kế hệ thống:}
+		\item \textbf{Chương 3 - Hiện thực và đánh giá hệ thống:}
+		\item \textbf{Chương 4 - Kết luận:}
+	\end{itemize}
+	Ở cuối báo cáo sẽ là \textbf{Tài liệu tham khảo} và \textbf{Phụ lục} để tiện theo dõi.
+
+	\section{Phân tích và thiết kế hệ thống}
+	\subsection{Thiết kế hệ thống mạng}
+	\subsection{Sơ đồ}
+	Để xây dựng hệ thống tường lửa bảo vệ cho một số thành phần trong mạng, ta cần xây dựng một hệ thống mạng tương ứng, đáp ứng đủ cả về outbound lẫn inbound network tương ứng với hệ thống tường lửa.
+	\par
+	Sơ đồ sau đây minh hoạ kiến trúc hệ thống tổng quan mà nhóm đề xuất cho việc hiện thực cũng như xây dựng các kịch bản kiểm thử:
+	
+	% image goes here
+	
+	\subsection{Mạng con và chia dải địa chỉ}
+	
+	
+	\subsection{Lựa chọn công cụ}
+	\subsection{Thiết kế chức năng}
+	\section{Hiện thực và đánh giá hệ thống}
+	\subsection{Hiên thực hệ thống trên môi trường ảo hoá}
+	\subsection{Hiện thực chức năng và kiểm thử}
+	\section{Kết luận}
+	\subsection{Tài nguyên sử dụng}
+	\subsection{Kết luận}
+	
+\end{document}
+
